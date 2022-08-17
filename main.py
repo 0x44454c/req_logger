@@ -6,7 +6,7 @@ from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 
-app = Flask("req_logger")
+app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///req_logger.db"
 app.config["SECRET_KEY"] = "my_own_secret"
 db = SQLAlchemy(app)
